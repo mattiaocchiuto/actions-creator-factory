@@ -1,7 +1,3 @@
-function createDynamicFunction(customAction) {
-    return Function('action', 'return function (){ return action.apply(this, [...arguments]) };')(customAction);
-}
-
 function formatFunctionName(type) {
     let formattedName = '';
 
@@ -60,7 +56,7 @@ module.exports = function actionsCreatorFactory(actionsConfig) {
         const functionName = formatFunctionName(type);
 
         const customFunction = generalFactory(type, payload);
-        const customStringFunction = createDynamicFunction(customFunction);
+        const customStringFunction = customFunction;
 
         funcToExport[functionName] = customStringFunction;
 
