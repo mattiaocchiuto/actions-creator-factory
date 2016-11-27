@@ -1,6 +1,3 @@
-// TODO
-// 1) Metti a posto i nomi di funzioni e variabili
-
 function createDynamicFunction(customAction) {
     return Function('action', 'return function (){ return action.apply(this, [...arguments]) };')(customAction);
 }
