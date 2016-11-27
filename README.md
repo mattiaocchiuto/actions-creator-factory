@@ -40,12 +40,12 @@ npm install
 then
 ### Building
 ```
-npm build
+npm run build
 ```
 
 ### Running test
 ```
-npm test
+npm run test
 ```
   
 ## License
