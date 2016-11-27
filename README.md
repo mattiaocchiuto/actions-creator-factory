@@ -12,7 +12,7 @@ This script provide a factory function whose goal is to automatically generate t
 ## Installation
 From npm
 ```
-npm i actions-creator-factory
+npm i --save actions-creator-factory
 ```
 ```javascript
 import actionsCreatorFactory from 'actions-creator-factory';
