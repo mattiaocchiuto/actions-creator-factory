@@ -1,0 +1,27 @@
+{
+  "name": "action-creator-factory",
+  "version": "0.0.1",
+  "description": "This library provide an easy way to remove the boilerplate around the actions creator in a MVI application",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiaocchiuto/actions-creator-factory.git"
+  },
+  "keywords": [
+    "actions",
+    "redux",
+    "boilerplate"
+  ],
+  "author": "Mattia Occhiuto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattiaocchiuto/actions-creator-factory/issues"
+  },
+  "homepage": "https://github.com/mattiaocchiuto/actions-creator-factory#readme"
+}
