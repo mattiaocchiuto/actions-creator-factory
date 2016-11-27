@@ -15,16 +15,16 @@ function formatFunctionName(type) {
         } else {
             formattedName += capitalizeFirstLetter(val.toLowerCase());
         }
+
+        return true;
     });
 
     return formattedName;
 }
 
-const funcToExport = {};
-
 function generalFactory(type, payloadTranslator) {
     return function nomeDaSostituire(data) {
-        let action = {
+        const action = {
             type,
         };
 
@@ -40,11 +40,13 @@ function generalFactory(type, payloadTranslator) {
         }
 
         return action;
-    }
+    };
 }
 
 module.exports = function actionsCreatorFactory(actionsConfig) {
-    actionsConfig.map(config => {
+    const funcToExport = {};
+
+    actionsConfig.map((config) => {
         let type = null;
         let payload = null;
 
@@ -57,11 +59,13 @@ module.exports = function actionsCreatorFactory(actionsConfig) {
 
         const functionName = formatFunctionName(type);
 
-        let customFunction = generalFactory(type, payload);
-        let customStringFunction = createDynamicFunction(customFunction);
+        const customFunction = generalFactory(type, payload);
+        const customStringFunction = createDynamicFunction(customFunction);
 
         funcToExport[functionName] = customStringFunction;
+
+        return true;
     });
 
     return funcToExport;
-} 
+};

@@ -4,8 +4,9 @@
   "description": "This library provide an easy way to remove the boilerplate around the actions creator in a MVI application",
   "main": "dist/index.min.js",
   "scripts": {
-    "test": "mocha tests/ --compilers js:babel-core/register",
-    "build": "webpack"
+    "test": "npm run lint && mocha tests/ --compilers js:babel-core/register",
+    "build": "webpack",
+    "lint": "node_modules/.bin/eslint src/"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,14 @@
     "chai": "^3.5.0",
     "eslint": "^3.11.0",
     "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
     "mocha": "^3.2.0",
     "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^13.0.0"
   }
 }

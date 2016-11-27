@@ -1,1 +1,7 @@
-extends: airbnb
+{
+    "extends": "airbnb-base",
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
+        "no-new-func": 0
+    }
+}
