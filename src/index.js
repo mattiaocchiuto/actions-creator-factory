@@ -43,7 +43,7 @@ function generalFactory(type, payloadTranslator) {
     }
 }
 
-module.exports = function actionFactory(actionsConfig) {
+module.exports = function actionsCreatorFactory(actionsConfig) {
     actionsConfig.map(config => {
         let type = null;
         let payload = null;
