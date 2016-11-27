@@ -1,5 +1,5 @@
 {
-  "name": "actions-creator-factory",
+  "name": "actions_creator_factory",
   "version": "0.0.2",
   "description": "This library provide an easy way to remove the boilerplate around the actions creator in a MVI application",
   "main": "dist/index.min.js",
