@@ -15,19 +15,16 @@ From npm
 npm i --save actions-creator-factory
 ```
 ```javascript
-import actionsCreatorFactory from 'actions-creator-factory';
+import { actionsCreatorFactory, noop } from 'actions-creator-factory';
 ```
 
 ## Examples of use:
 ```javascript
-const actions = [
-    'TEST_NO_PAYLOAD',
-    'TEST_PAYLOAD_ALL',
-    {
-        type: 'TEST_PAYLOAD_FUNCTION',
-        payload: (data) => data + ' test',
-    },
-];
+const actions = {
+    'TEST_NO_PAYLOAD': noop,
+    'TEST_PAYLOAD_ALL': noop,
+    'TEST_PAYLOAD_FUNCTION': (data) => data + ' test',
+};
 
 const actionCreators = actionsCreatorFactory(actions);
 ```

@@ -39,19 +39,16 @@ function generalFactory(type, payloadTranslator) {
     };
 }
 
-module.exports = function actionsCreatorFactory(actionsConfig) {
+export function noop(args) {
+    return args;
+}
+
+export function actionsCreatorFactory(actionsConfig) {
     const funcToExport = {};
 
-    actionsConfig.map((config) => {
-        let type = null;
-        let payload = null;
-
-        if (typeof config === 'string') {
-            type = config;
-        } else {
-            type = config.type;
-            payload = config.payload;
-        }
+    Object.keys(actionsConfig).map((configKey) => {
+        const type = configKey;
+        const payload = actionsConfig[configKey];
 
         const functionName = formatFunctionName(type);
 
@@ -64,4 +61,4 @@ module.exports = function actionsCreatorFactory(actionsConfig) {
     });
 
     return funcToExport;
-};
+}
