@@ -1,12 +1,12 @@
 'use strict';
 
 import { expect } from 'chai';
-import { actionsCreatorFactory, noop } from '../src';
+import { actionsCreatorFactory, noop, identity } from '../src';
 
 describe('Comprehension Test', function () {
     const actions = {
         'TEST_NO_PAYLOAD': noop,
-        'TEST_PAYLOAD_ALL': noop,
+        'TEST_PAYLOAD_ALL': identity,
         'TEST_PAYLOAD_FUNCTION': (data) => data + ' test',
     };
 

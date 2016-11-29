@@ -39,7 +39,11 @@ function generalFactory(type, payloadTranslator) {
     };
 }
 
-export function noop(args) {
+export function noop() {
+    return undefined;
+}
+
+export function identity(args) {
     return args;
 }
 
