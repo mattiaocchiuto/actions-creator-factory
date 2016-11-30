@@ -31,7 +31,7 @@ const actionCreators = actionsCreatorFactory(actions);
 The library provide mainly three different functions that can be used as payload function transformator:
 
 1. ```actionsCreatorFactory```: main function used for the dynamic creation of the action creator functions, it take as input the configuration object
-2. ```noop```: function used for specify an action with payload
+2. ```noop```: function used for specify an action with no payload
 3. ```identity```: function used for specify an action where the param passed to the actions creator function should used for ad payload as is
 
 Furthermore custom function can be used, this function should always return something, this function will be receive as input the passed payload and produce as output the value to dispatch.
