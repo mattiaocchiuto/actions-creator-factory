@@ -1,6 +1,11 @@
 # actions-creator-factory
 [![Build Status](https://travis-ci.org/mattiaocchiuto/actions-creator-factory.svg?branch=master)](https://travis-ci.org/mattiaocchiuto/actions-creator-factory) [![npm version](https://badge.fury.io/js/actions-creator-factory.svg)](https://badge.fury.io/js/actions-creator-factory)
 
+[![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
+
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)  
+
+
 This is a very tiny script that prevent you from writing all the boilerplate related to the actions creator functions.
 
 Generally in a redux application (or more generally in an MVI) we have a (or more) file containing the actions type constants and in another different file the actions creator function.
