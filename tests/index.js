@@ -1,17 +1,14 @@
 'use strict';
 
 import { expect } from 'chai';
-import actionsCreatorFactory from '../src';
+import { actionsCreatorFactory, noop, identity } from '../src';
 
 describe('Comprehension Test', function () {
-    const actions = [
-        'TEST_NO_PAYLOAD',
-        'TEST_PAYLOAD_ALL',
-        {
-            type: 'TEST_PAYLOAD_FUNCTION',
-            payload: (data) => data + ' test',
-        },
-    ];
+    const actions = {
+        'TEST_NO_PAYLOAD': noop,
+        'TEST_PAYLOAD_ALL': identity,
+        'TEST_PAYLOAD_FUNCTION': (data) => data + ' test',
+    };
 
     const functionsCreated = actionsCreatorFactory(actions);
 
