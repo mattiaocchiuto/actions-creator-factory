@@ -1,5 +1,5 @@
 # actions-creator-factory
-[![Build Status](https://travis-ci.org/mattiaocchiuto/actions-creator-factory.svg?branch=master)](https://travis-ci.org/mattiaocchiuto/actions-creator-factory)
+[![Build Status](https://travis-ci.org/mattiaocchiuto/actions-creator-factory.svg?branch=master)](https://travis-ci.org/mattiaocchiuto/actions-creator-factory)[![npm version](https://badge.fury.io/js/actions-creator-factory.svg)](https://badge.fury.io/js/actions-creator-factory)
 
 This is a very tiny script that prevent you from writing all the boilerplate related to the actions creator functions.
 
